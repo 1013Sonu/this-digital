@@ -1,0 +1,1125 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+#main {
+    position: relative;
+    /* overflow-x: hidden; */
+}
+
+#pg1 {
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+}
+
+#pg1 #nav {
+    width: 100vw;
+    height: 13vh;
+    position: fixed;
+    /* position: relative; */
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    background-color: white;
+    z-index: 999;
+}
+
+#pg1 #nav #box{
+    /* background-color: red; */
+width: 40px;
+height: 50px;
+    /* background-color: red; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* padding-top: 3%; */
+    gap: 3px;
+    position: relative;
+    left: 95%;
+    cursor: pointer;
+    z-index: 999;
+}
+#pg1 #nav #line1{
+    height: 4px;
+    width: 100%;
+margin-left: 4%;
+border-radius: 50px;
+    background-color: black;
+    /* transform: ; */
+    transition: 0.5s ease-in-out;
+}
+
+#nav #line2{
+    height:4px;
+    width: 100%;
+border-radius: 50px;
+opacity: 0;
+    margin-left: 4%;
+    background-color: black;
+    opacity: 1;
+    transition: 0.5s ease-in;
+    animation: loading-bar2 3s 1s infinite alternate;
+
+}
+
+#nav #line3{
+    height: 4px;
+    width: 100%;
+    /* transform: ; */
+
+margin-left: 4%;
+border-radius: 50px;
+/* transform: translateY(-15px) rotate(-45deg) ; */
+
+transition: 0.5s ease-in-out;
+    background-color: black;
+    animation: loading-bar1 5s 3s infinite alternate;
+
+    /* transform: rotate(-55deg); */
+}
+
+#main #npg{
+    height: 100vh;
+    width: 100vw;
+    background-color: white;
+    position: absolute;
+    top: 0%;
+    right: -100%;
+    transition: 0.5s ease-in;
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+}
+
+#main #npg a{
+    text-decoration: none;
+    font-family: gilroy;
+    font-weight: 500;
+    font-size: 30px;
+    color: black;
+    margin-top: 3%;
+    margin-left: 45%;
+}
+
+#main #npg a:hover{
+ text-decoration: springgreen underline;
+
+}
+
+#main #npg a:nth-last-child(1) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    /* background-color: red; */
+    border-radius: 50px;
+    padding: 1px 1px;
+    border: 1px solid black;
+    overflow: hidden;
+    width: 13%;
+    height: 6%;
+    font-size: 25px;
+}
+#main #npg a #ng{
+    height: 100%;
+    width: 100%;
+    background-color: springgreen;
+    position: absolute;
+    top: 0%;
+    left: -100%;
+    z-index: -1;
+    transition: 0.5s ease-in-out;
+}
+#main #npg a:nth-last-child(1):hover #ng{
+    left: 0%;
+}
+#nav #nl {
+    height: 100%;
+    width: 20%;
+    /* background-color: blue; */
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: gilroy;
+    font-size: 30px;
+}
+
+#nav #nr {
+    height: 100%;
+    width: 70%;
+    /* background-color: blue; */
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    font-family: gilroy;
+    font-size: 20px;
+    left: 8%;
+}
+
+#nav #nr a {
+    text-decoration: none;
+    color: black;
+}
+
+#nav #nr a:hover {
+    text-decoration: springgreen underline;
+    /* transition: 0.5s;  */
+}
+
+#nav #nr a:nth-last-child(1) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    /* background-color: red; */
+    border-radius: 50px;
+    padding: 0px 20px;
+    border: 1px solid black;
+    overflow: hidden;
+}
+
+#ef {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-color: springgreen;
+    top: 0%;
+    left: -100%;
+    transition: ease .5s;
+    z-index: -1;
+}
+
+#nav #nr a:nth-last-child(1):hover #ef {
+    left: 0%;
+}
+
+#pg1 #i1 {
+    height: 60vh;
+    position: absolute;
+    left: 5%;
+    top: 20%;
+}
+
+#pg1 #i2 {
+    height: 35vh;
+    position: absolute;
+    left: 55%;
+    top: 20%;
+}
+
+#pg1 #i3 {
+    height: 40vh;
+    position: absolute;
+    left: 75%;
+    top: 50%;
+}
+
+#pg1 h1 {
+    position: absolute;
+    top: 35%;
+    left: 25%;
+    font-family: playfair display;
+    font-weight: 500;
+    font-size: 65px;
+    width: 50vw;
+    text-align: center;
+    z-index: 99;
+}
+
+#pg1>h1::after {
+    content: "";
+    background-image: url(https://thisisdigital.co.uk/dist/images/underline-green.svg);
+    overflow: hidden;
+    object-fit: cover;
+    height: 12px;
+    width: 20vw;
+    position: absolute;
+    bottom: 1%;
+    left: 30%;
+}
+
+#pg1 h2 {
+    position: absolute;
+    top: 70%;
+    left: 40%;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+#pg1 h2 #hara {
+    transform: rotate(90deg);
+    border: 1px solid;
+    height: 12vh;
+    padding: 20px 2px;
+    border-radius: 20px;
+}
+
+#pg1 h2 #hara {
+    position: relative;
+    overflow: hidden;
+}
+
+#pg1 h2 #green {
+    height: 100%;
+    width: 100%;
+    background-color: springgreen;
+    position: absolute;
+    top: 100%;
+    left: 0%;
+    z-index: -1;
+    transition: .5s ease;
+
+}
+
+#hara:hover #green {
+    top: 0%;
+    transition: 0.5s;
+
+}
+
+#pg2 {
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    font-family: playfair display;
+    /* color: white; */
+}
+
+#pg2 h1 {
+    color: white;
+    position: absolute;
+    top: 20%;
+    font-size: 20px;
+    font-weight: 200;
+}
+
+#pg2 p {
+    color: white;
+    position: absolute;
+    top: 30%;
+    font-size: 48px;
+    width: 75vw;
+    text-align: center;
+    font-family: playfair display;
+}
+
+#pg2 h4 {
+    display: flex;
+    align-items: center;
+    color: white;
+    position: absolute;
+    top: 70%;
+    font-size: 20px;
+    gap: 30px;
+}
+
+#pg2 #boxx {
+    height: 15px;
+    width: 15px;
+    background-color: springgreen;
+    position: absolute;
+    top: 21%;
+    left: 29%;
+    border: 1px solid;
+    border-radius: 50%;
+}
+
+#pg2>h4 #hara {
+    transform: rotate(0deg);
+    border: 1px solid;
+    height: 6vh;
+    width: 6vw;
+    padding: 1px 10px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+}
+
+#pg2 #hara {
+    overflow: hidden;
+    position: relative;
+}
+
+#pg2 #hara #green {
+    height: 100%;
+    width: 100%;
+    background-color: springgreen;
+    position: absolute;
+    top: 0%;
+    left: -100%;
+    transition: .5s ease;
+
+}
+
+
+#pg2 #hara:hover #green {
+    left: 0%;
+
+}
+
+
+#pg3 {
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    display: flex;
+}
+
+#pg3 #l {
+    height: 100vh;
+    width: 50vw;
+    /* background-color: red; */
+    position: relative;
+}
+
+#pg3 #l #i11 {
+    height: 60vh;
+    position: absolute;
+    width: 10vw;
+
+}
+
+
+#pg3 #l #i22 {
+    height: 40vh;
+    width: 10vw;
+    position: absolute;
+    top: 65%;
+
+}
+
+
+#pg3 #l #i33 {
+    height: 30vh;
+    position: absolute;
+    left: 25%;
+
+}
+
+
+#pg3 #l #i44 {
+    height: 80vh;
+    position: absolute;
+    left: 25%;
+    top: 35%;
+
+}
+
+#pg3 #r {
+    height: 100vh;
+    width: 50vw;
+    /* background-color: red; */
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#pg3 h1 {
+    font-family: playfair display;
+    font-size: 50px;
+    width: 30vw;
+    font-weight: 200;
+}
+
+#pg3 p {
+    font-family: playfair display;
+    width: 40vw;
+}
+
+#pg3 h3 {
+    position: absolute;
+    top: 68%;
+    left: 15%;
+    font-size: 25px;
+    font-family: playfair display;
+    font-weight: 200;
+}
+
+#pg3 a {
+    position: absolute;
+    top: 67%;
+    left: 50%;
+    font-size: 20px;
+    font-family: playfair display;
+    font-weight: 200;
+    border: 1px solid;
+    border-radius: 20px;
+    text-decoration: none;
+    width: 15vw;
+    height: 8vh;
+    padding: 8px 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    overflow: hidden;
+    color: black;
+}
+
+#pg3 #men {
+    height: 10vh;
+    width: 10vh;
+    background-color: lightblue;
+    border: 1px solid lightblue;
+    border-radius: 50%;
+}
+
+#pg3 a #hara {
+    position: relative;
+    overflow: hidden;
+
+}
+
+#pg3 a #green {
+    height: 100%;
+    width: 100%;
+    background-color: springgreen;
+    border: 1px solid;
+    border: 20px;
+    position: absolute;
+    top: 0%;
+    left: -100%;
+    z-index: -1;
+    transition: .5s ease;
+
+}
+
+#pg3 #hara:hover #green {
+    left: 0%;
+    transition: 0.5s ease;
+}
+
+#pg4 {
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+}
+
+#pg4 h1 {
+    font-family: playfair display;
+    font-size: 45px;
+    font-weight: 200;
+    position: absolute;
+    top: 25%;
+    left: 12%;
+    text-align: center;
+    width: 75vw;
+}
+
+#pg4 h1::after {
+    content: "";
+    background-image: url(https://thisisdigital.co.uk/dist/images/circle-green.svg);
+    position: absolute;
+    left: 15%;
+    top: 1%;
+    height: 70px;
+    width: 10vw;
+    overflow: hidden;
+    object-fit: cover;
+}
+
+#pg4 #b {
+    height: 100vh;
+    width: 100vw;
+    /* background-color: red; */
+    position: absolute;
+    top: 45%;
+}
+
+#pg4 #b #brands {
+    height: 100vh;
+    width: 90vw;
+    position: relative;
+    display: inline-block;
+    margin-left: 3%;
+}
+
+#pg4 #b #brands img {
+    width: 8vw;
+    height: 8vh;
+    margin-top: 6%;
+    margin-left: 8%;
+}
+
+#pg5 {
+    height: 150vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+#pg5 #golf {
+    height: 65vh;
+    margin-top: -5%;
+    margin-left: 5%;
+
+}
+
+#pg5 #books {
+    height: 65vh;
+    margin-top: -5%;
+    margin-left: 10%;
+}
+
+#pg5 #box1 {
+    height: 64vh;
+    width: 38.4vw;
+    background-color: transparent;
+    position: absolute;
+    top: 25%;
+    left: 5%;
+}
+
+#pg5 #box1 img {
+    height: 10vh;
+    position: absolute;
+    left: 5%;
+}
+
+#pg5 #box1 h1 {
+    position: absolute;
+    top: 40%;
+    left: 5%;
+    font-size: 5vh;
+    color: white;
+    font-weight: 200;
+
+}
+
+#pg5 #box1 h2 {
+    position: absolute;
+    top: 85%;
+    left: 5%;
+    font-size: 4vh;
+    color: white;
+    font-weight: 200;
+
+}
+
+
+#pg5 #box2 {
+    height: 64vh;
+    width: 38vw;
+    background-color: transparent;
+    position: absolute;
+    top: 25%;
+    left: 53.5%;
+}
+
+#pg5 #box2 img {
+    height: 10vh;
+    position: absolute;
+    left: 5%;
+}
+
+#pg5 #box2 h1 {
+    position: absolute;
+    top: 40%;
+    left: 5%;
+    font-size: 5.5vh;
+    color: white;
+    font-weight: 500;
+
+}
+
+#pg5 #box2 h2 {
+    position: absolute;
+    top: 85%;
+    left: 5%;
+    font-size: 4vh;
+    color: white;
+    font-weight: 200;
+}
+
+#pg5 #box1 #arrow {
+    position: absolute;
+    top: 85%;
+    left: 40%;
+    border: 1px solid white;
+    border-radius: 20px;
+    padding: 1px 10px;
+}
+
+#pg5 #box2 #arrow {
+    position: absolute;
+    top: 85%;
+    left: 40%;
+    border: 1px solid white;
+    border-radius: 20px;
+    padding: 1px 10px;
+} 
+
+#pg5 #box2 #arrow  #hara{
+    position: relative;
+    overflow: hidden;
+}
+#pg5 #box2 #arrow  #hara #green{
+    height: 100%;
+    width: 100%;
+    background-color: springgreen;
+    position: absolute;
+    left: 0%;
+}
+#overlay {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.737)10%, transparent 50%);
+}
+
+#pg5 #p {
+    height: 10vh;
+    width: 40vw;
+    background-color: transparent;
+    position: absolute;
+    top: 75%;
+    left: 25%;
+    display: flex;
+    align-items: center;
+}
+
+#pg5 #p #pimg {
+    height: 10vh;
+    width: 10vh;
+    border-radius: 50%;
+    background-color: lightblue;
+    position: relative;
+    left: 18%;
+}
+
+#pg5 #p #pimg img {
+    height: 10vh;
+}
+
+#pg5 #p h1 {
+    position: absolute;
+    left: 35%;
+    top: 28%;
+    text-decoration: none;
+    font-size: 4vh;
+    font-weight: 300;
+}
+
+#pg5 #p a {
+    position: absolute;
+    left: 50%;
+    text-decoration: none;
+    border: 1px solid rgba(0, 0, 0, 0.505);
+    border-radius: 20px;
+    height: 8vh;
+    width: 12vw;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    gap: 10px;
+    color: black;
+}
+
+#pg5 #p #hara {
+    position: relative;
+    overflow: hidden;
+}
+
+#pg5 #p a #green {
+    height: 100%;
+    width: 100%;
+    background-color: springgreen;
+    position: absolute;
+    top: 0%;
+    left: -100%;
+    z-index: -1;
+    transition: 0.5s ease;
+
+}
+
+#pg5 #hara:hover #green {
+    left: 0%;
+    transition: 0.5s ease;
+}
+
+#pg6 {
+    height: 150vh;
+    width: 100vw;
+    position: relative;
+}
+
+
+.swiper {
+    width: 100%;
+    height: 70%;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+
+
+.swiper-slide>img {
+    width: 20vw;
+
+
+}
+
+.swiper-slide p {
+    width: 80vw;
+    font-family: gilroy;
+    font-size: 35px;
+}
+
+
+#pg7 {
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    background-color: black;
+}
+
+#pg7 img {
+    height: 50vh;
+    width: 60vw;
+    position: absolute;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+#pg7 #p7 {
+    height: 50vh;
+    width: 60vw;
+    position: relative;
+    left: 20%;
+    top: -18%;
+}
+
+
+#pg7 #overlay {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.756)10%, transparent 50%);
+}
+
+#pg7 #p7 h1 {
+    width: 45vw;
+    position: relative;
+    left: 20%;
+    top: 15%;
+    color: white;
+    font-family: gilroy;
+    font-weight: 200;
+    font-size: 30px;
+    text-align: center;
+}
+
+#pg7 #p7 h1::before {
+    content: "";
+    position: absolute;
+    top: 27%;
+    left: 11%;
+    height: 7px;
+    width: 7vw;
+    background-image: url(https://thisisdigital.co.uk/dist/images/underline-green.svg);
+}
+
+#pg7 #end {
+    width: 100vw;
+    height: 50vh;
+    /* background-color: red; */
+    position: absolute;
+    top: 35%;
+    display: flex;
+    gap: 10px;
+    flex-shrink: 0;
+}
+
+#pg7 #end #c {
+    height: 100%;
+    width: 20%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    /* background-color: blue; */
+}
+
+#pg7 #end #c h1 {
+    width: 18vw;
+    font-size: 40px;
+    position: absolute;
+    left: 12%;
+    color: white;
+}
+
+#pg7 #end #c h1::before {
+    content: "";
+    position: absolute;
+    height: 10vh;
+    width: 14vw;
+    top: 33%;
+    left: -10%;
+    background-image: url(https://thisisdigital.co.uk/dist/images/circle-green.svg);
+}
+
+#pg7 #end #c h2 {
+    font-size: 25px;
+    margin-left: 12%;
+    margin-top: 5%;
+    color: white;
+}
+
+#pg7 #end #c a {
+    font-size: 20px;
+    margin-left: 12%;
+    margin-top: 5%;
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.717);
+}
+
+#pg7 #end #c a:hover {
+    text-decoration: underline springgreen;
+}
+
+#pg7 #end #c h3 {
+    font-size: 25px;
+    margin-left: 12%;
+    margin-top: 5%;
+    color: white;
+}
+
+#pg7 #end #c img {
+    object-fit: cover;
+    overflow: hidden;
+    position: absolute;
+    top: 20%;
+}
+
+
+#pg7 #end #c #p1 {
+    position: absolute;
+    top: 5%;
+    left: 10%;
+    height: 8vh;
+    width: 18vh;
+}
+
+#pg7 #end #c #p2 {
+    position: absolute;
+    top: 35%;
+    left: 10%;
+    height: 15vh;
+    width: 15vh;
+}
+
+#pg7 #end #c #p3 {
+    position: absolute;
+    top: 72%;
+    left: 10%;
+    height: 10vh;
+    width: 26vh;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+
+#pg7 #line {
+    height: 2px;
+    width: 90vw;
+    background-color: rgba(255, 255, 255, 0.591);
+    position: absolute;
+    bottom: 15%;
+    left: 5%;
+}
+
+#pg7 #last {
+    width: 100vw;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    /* background-color: red; */
+    position: absolute;
+    bottom: 3%;
+}
+
+#pg7 #last h1 {
+    font-family: gilroy;
+    font-weight: 100;
+    color: white;
+    font-size: 28px;
+    position: absolute;
+    left: 5%;
+}
+
+#pg7 #last h2 {
+    font-family: gilroy;
+    font-weight: 100;
+    color: white;
+    font-size: 15px;
+    position: absolute;
+    left: 25%;
+}
+
+#pg7 #last a {
+    font-family: gilroy;
+    font-weight: 100;
+    color: white;
+    font-size: 15px;
+    position: absolute;
+    left: 65%;
+    text-decoration: none;
+}
+
+
+#pg7 #last a:hover {
+    text-decoration: underline springgreen;
+}
+
+#pg7 #last h3 {
+    font-family: gilroy;
+    font-weight: 100;
+    color: white;
+    font-size: 12px;
+    position: absolute;
+    left: 75%;
+}
+
+#pg7 #last #insta {
+    font-family: gilroy;
+    font-weight: 100;
+    color: white;
+    font-size: 18px;
+    position: absolute;
+    left: 90%;
+}
+
+#pg7 #last #link {
+    font-family: gilroy;
+    font-weight: 100;
+    color: white;
+    font-size: 18px;
+    position: absolute;
+    left: 92%;
+}
+
+#pg7 #last #link:hover {
+    color: springgreen;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+#pg7 #last #insta:hover {
+    color: springgreen;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+#pg7 #p7 #div {
+    height: 10vh;
+    width: 35vw;
+    /* background-color: red; */
+    position: relative;
+    top: 30%;
+    left: 30%;
+    display: flex;
+    align-items: center;
+    color: white;
+    font-family: gilroy;
+}
+
+#pg7 #p7 #div h2 {
+    position: absolute;
+    left: 15%;
+    font-weight: 200;
+}
+
+#pg7 #p7 #div a {
+    position: absolute;
+    left: 55%;
+    text-decoration: none;
+    color: white;
+    display: flex;
+    align-items: center;
+    border: 1px solid;
+    border-radius: 20px;
+    padding: 1px 10px;
+}
+
+#pg7 #p7 #div #hara1 {
+    position: relative;
+    overflow: hidden;
+}
+
+#pg7 #p7 #div #green1 {
+    height: 100%;
+    width: 100%;
+    background-color: springgreen;
+    position: absolute;
+    top: 0%;
+    left: -100%;
+}
+
+#pg7  #hara1:hover #green1 {
+    left: 0%;
+    cursor: pointer;
+}
+
+#pg7 #p7 #div #men2 {
+    height: 10vh;
+    width: 10vh;
+    background-color: lightblue;
+    border: 1px solid lightblue;
+    border-radius: 50%;
+}
+
+#overlay7 {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 999;
+background: linear-gradient(to top,rgba(0, 0, 0, 0.489) 10%,transparent 50%);
+    top: 0%;
+    left: 0%;
+}
+
+@media (max-width:500px) {}
